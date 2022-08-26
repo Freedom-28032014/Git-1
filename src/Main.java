@@ -1,19 +1,19 @@
 public class Main {
     public static void main(String[] args) {
-        SalesManager salesManager = new SalesManager(new int[]{});
-        int max = salesManager.max();
+        SalesManager salesManager = new SalesManager(new long[]{});
+        long max = salesManager.max();
         System.out.println(max);
-        int min = salesManager.min(max);
-        int sum = 0;
-        for (int s : salesManager.sales) {
+        long min = salesManager.min(max);
+        long sum = 0;
+        for (long s : salesManager.sales) {
             sum += s;
 
         }
-        int length = salesManager.sales.length;
+        long length = salesManager.sales.length;
         System.out.println(croppedMedium(min, max, sum, length));
     }
 
-    public static int croppedMedium(int max, int min, int sum, int lenght) {
+    public static long croppedMedium(long max, long min, long sum, long lenght) {
         if (lenght == 1) {
             return sum;
         }
